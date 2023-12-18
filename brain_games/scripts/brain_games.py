@@ -9,11 +9,12 @@ def greet():
 
 def main():
     greet()
+    cli.welcome_user()
 
 
 if __name__ == '__main__':
     main()
-    cli.welcome_user()
+
 
 
 
