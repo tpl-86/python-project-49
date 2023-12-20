@@ -2,9 +2,9 @@ import prompt
 from random import randint
 
 
-def even_number():
+def find_even_number():
     name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}')
+    print(f'Hello, {name}!')
     print('Answer "yes" if the number is even, '
           'otherwise answer "no".')
     for i in range(3):
@@ -23,4 +23,4 @@ def even_number():
             else:
                 return print(f"'{answer}' is wrong "
                              "answer ;(. Correct answer was 'no'.")
-    return print(f'Congratulations, {name}!')
+    print(f'Congratulations, {name}!')

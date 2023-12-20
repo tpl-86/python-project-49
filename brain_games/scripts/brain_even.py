@@ -9,7 +9,7 @@ def greet():
 
 def main():
     greet()
-    even_game.even_number()
+    even_game.find_even_number()
 
 
 if __name__ == '__main__':
