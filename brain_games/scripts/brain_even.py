@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from brain_games import even_game
+from brain_games import logic_game
 
 
 def greet():
@@ -9,7 +9,7 @@ def greet():
 
 def main():
     greet()
-    even_game.find_even_number()
+    logic_game.play_game()
 
 
 if __name__ == '__main__':
