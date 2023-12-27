@@ -1,11 +1,14 @@
 from random import randint
 
 
-def value():
-    return randint(1, 100)
+def rules():
+    print('Answer "yes" if the number is even, otherwise answer "no".')
 
+def quastion():
+    value = randint(1, 100)
+    return value
 
-def result(number):
+def correct_answer(number):
     if number % 2 == 0:
         return 'yes'
     else:

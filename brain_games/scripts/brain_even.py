@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from brain_games import logic_game
+from brain_games.games import even_game
 
 
 def greet():
@@ -9,7 +10,17 @@ def greet():
 
 def main():
     greet()
-    logic_game.play_game()
+    user_name = logic_game.welcome_user()
+    even_game.rules()
+    for i in range(3):
+        quastion_game = even_game.quastion()
+        answer_game = even_game.correct_answer(quastion_game)
+        result = logic_game.play_game(quastion_game, answer_game)
+        if result == 'Correct!':
+            print(result)
+        else:
+            return result
+    print(f'Congratulations, {user_name}!')
 
 
 if __name__ == '__main__':
