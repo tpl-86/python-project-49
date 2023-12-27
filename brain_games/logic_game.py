@@ -13,5 +13,5 @@ def play_game(quastion, correct_answer):
     if answer == correct_answer:
         return 'Correct!'
     else:
-        return print( f"'{answer}' is wrong answer ;(."
-              f"Correct answer was '{correct_answer}'.")
+        return f"'{answer}' is wrong answer ;(. \
+                Correct answer was '{correct_answer}'."

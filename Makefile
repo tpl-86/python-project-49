@@ -15,6 +15,7 @@ package-install:
 
 lint:
 	poetry run flake8 brain_games
+
 reinstall:
 	python3 -m pip install dist/*.whl --force-reinstall
 
