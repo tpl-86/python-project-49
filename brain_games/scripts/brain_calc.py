@@ -22,7 +22,7 @@ def main():
         answer_game = calc_game.correct_answer(
             operand_1, sign_expression, operand_2,
         )
-        result = logic_game.play_game(quastion_game, str(answer_game))
+        result = logic_game.play_game(quastion_game, answer_game)
         if result == 'Correct!':
             print(result)
         else:
