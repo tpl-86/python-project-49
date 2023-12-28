@@ -1,4 +1,5 @@
-from random import randint
+from random import randrange
+from math import gcd
 
 
 def rules():
@@ -6,12 +7,12 @@ def rules():
 
 
 def num_1():
-    number = randint(1, 100)
+    number = randrange(0, 1000, 5)
     return number
 
 
 def num_2():
-    number = randint(1, 100)
+    number = randrange(0, 1000, 5)
     return number
 
 
@@ -20,3 +21,5 @@ def quastion(num_1, num_2):
 
 
 def correct_answer(num_1, num_2):
+    result = gcd(num_1, num_2)
+    return result
