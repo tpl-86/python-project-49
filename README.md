@@ -7,3 +7,11 @@ https://asciinema.org/a/apgHbIK8BoAz3laTrJIYGbckC
 
 Video brain-calc:
 https://asciinema.org/a/UovPCwHDOTm7K0L9Ojg55FM9h
+
+
+Video brain-gcd:
+https://asciinema.org/a/hpgqHk7fbd1NxLGYsMIUoZtor
+
+
+Video brain-progression:
+https://asciinema.org/a/Hm0DyHPxj8rWtLDdlHVMuDWcP
