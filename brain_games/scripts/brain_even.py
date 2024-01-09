@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from brain_games import logic_game
-from brain_games.games.even_game import rules, quastion, correct_answer
+from brain_games.games import even_game
 
 
 def greet():
@@ -10,7 +10,9 @@ def greet():
 
 def main():
     greet()
-    return logic_game.play_game(rules, quastion, correct_answer(quastion))
+    return logic_game.play_game(even_game.rules,
+                                even_game.question,
+                                even_game.correct_answer(even_game.question))
 
 
 if __name__ == '__main__':

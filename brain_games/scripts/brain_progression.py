@@ -11,7 +11,7 @@ def greet():
 def main():
     greet()
     return logic_game.play_game(progression_game.rules,
-                                progression_game.quastions,
+                                progression_game.question,
                                 progression_game.answers)
 
 

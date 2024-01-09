@@ -5,7 +5,7 @@ from math import gcd
 rules = 'Find the greatest common divisor of given numbers.'
 
 
-def generates_quastion():
+def generates_question():
     result = []
     for i in range(3):
         num_1 = randrange(0, 1000, 5)
@@ -22,4 +22,4 @@ def correct_answer(items):
     return result
 
 
-quastion = generates_quastion()
+question = generates_question()

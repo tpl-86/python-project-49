@@ -4,7 +4,7 @@ from random import randint
 rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def generates_quastion():
+def generates_question():
     result = []
     for i in range(3):
         number = randint(0, 1000)
@@ -26,4 +26,4 @@ def correct_answer(items):
     return result
 
 
-quastion = generates_quastion()
+question = generates_question()

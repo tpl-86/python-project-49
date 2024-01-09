@@ -17,7 +17,7 @@ def progression_output():
     return result
 
 
-def generates_quastions(list_progressions, items):
+def generates_question(list_progressions, items):
     result = []
     for i in range(len(list_progressions)):
         result_progression = ''
@@ -40,4 +40,4 @@ def correct_answer(list_progressions):
 
 progressions = progression_output()
 answers = correct_answer(progressions)
-quastions = generates_quastions(progressions, answers)
+question = generates_question(progressions, answers)

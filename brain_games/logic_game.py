@@ -7,12 +7,12 @@ def welcome_user():
     return name
 
 
-def play_game(rules, quastion, correct_answer):
+def play_game(rules, question, correct_answer):
     name = prompt.string('May I have yuor name? ')
     print(f'Hello, {name}!')
     print(rules)
     for i in range(3):
-        print('Quastion: ', quastion[i])
+        print('Question: ', question[i])
         answer = prompt.string('Your answer: ')
         if answer == str(correct_answer[i]):
             print('Correct!')

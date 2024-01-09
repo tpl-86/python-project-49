@@ -11,8 +11,8 @@ def greet():
 def main():
     greet()
     return logic_game.play_game(calc_game.rules,
-                                calc_game.quastion,
-                                calc_game.correct_answer(calc_game.quastion))
+                                calc_game.question,
+                                calc_game.correct_answer(calc_game.question))
 
 
 if __name__ == '__main__':

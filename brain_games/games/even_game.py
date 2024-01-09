@@ -4,7 +4,7 @@ from random import randint
 rules = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def generates_quastion():
+def generates_question():
     result = []
     for i in range(3):
         value = randint(1, 100)
@@ -22,4 +22,4 @@ def correct_answer(items):
     return result
 
 
-quastion = generates_quastion()
+question = generates_question()
