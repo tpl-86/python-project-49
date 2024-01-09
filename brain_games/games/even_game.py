@@ -1,17 +1,25 @@
 from random import randint
 
 
-def rules():
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+rules = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def quastion():
-    value = randint(1, 100)
-    return value
+def generates_quastion():
+    result = []
+    for i in range(3):
+        value = randint(1, 100)
+        result.append(value)
+    return result
 
 
-def correct_answer(number):
-    if number % 2 == 0:
-        return 'yes'
-    else:
-        return 'no'
+def correct_answer(items):
+    result = []
+    for i in items:
+        if i % 2 == 0:
+            result.append('yes')
+        else:
+            result.append('no')
+    return result
+
+
+quastion = generates_quastion()

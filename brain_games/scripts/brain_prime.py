@@ -10,17 +10,9 @@ def greet():
 
 def main():
     greet()
-    user_name = logic_game.welcome_user()
-    prime_game.rules()
-    for i in range(3):
-        quastion_game = prime_game.quastion()
-        answer_game = prime_game.correct_answer(quastion_game)
-        result = logic_game.play_game(quastion_game, answer_game)
-        if result == 'Correct!':
-            print(result)
-        else:
-            return result + f"\nLet's try again, {user_name}!"
-    print(f'Congratulations, {user_name}!')
+    return logic_game.play_game(prime_game.rules,
+                                prime_game.quastion,
+                                prime_game.correct_answer(prime_game.quastion))
 
 
 if __name__ == '__main__':

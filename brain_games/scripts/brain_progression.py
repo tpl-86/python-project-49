@@ -10,20 +10,9 @@ def greet():
 
 def main():
     greet()
-    user_name = logic_game.welcome_user()
-    progression_game.rules()
-    for i in range(3):
-        progression = progression_game.progression_output()
-        answer_game = progression_game.correct_answer(
-            progression)
-        quastion_game = progression_game.quastion(
-            progression, answer_game)
-        result = logic_game.play_game(quastion_game, answer_game)
-        if result == 'Correct!':
-            print(result)
-        else:
-            return result + f"\nLet's try again, {user_name}!"
-    print(f'Congratulations, {user_name}!')
+    return logic_game.play_game(progression_game.rules,
+                                progression_game.quastions,
+                                progression_game.answers)
 
 
 if __name__ == '__main__':

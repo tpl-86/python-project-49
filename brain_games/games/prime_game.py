@@ -1,17 +1,29 @@
-import random
+from random import randint
 
 
-def rules():
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def quastion():
-    number = random.randint(0, 1000)
-    return number
+def generates_quastion():
+    result = []
+    for i in range(3):
+        number = randint(0, 1000)
+        result.append(number)
+    return result
 
 
-def correct_answer(number):
-    for i in range(2, (number // 2) + 1):
-        if number % i == 0:
+def is_prime(item):
+    for i in range(2, (item // 2) + 1):
+        if item % i == 0:
             return 'no'
     return 'yes'
+
+
+def correct_answer(items):
+    result = []
+    for item in items:
+        result.append(is_prime(item))
+    return result
+
+
+quastion = generates_quastion()
