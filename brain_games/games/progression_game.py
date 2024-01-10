@@ -1,7 +1,7 @@
 import random
 
 
-rules = 'What number is missing in the progression?'
+RULES = 'What number is missing in the progression?'
 
 
 def generate_progression():

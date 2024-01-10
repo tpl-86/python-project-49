@@ -1,7 +1,7 @@
 from random import randint, choice
 
 
-rules = 'What is the result of the expression?'
+RULES = 'What is the result of the expression?'
 
 
 def generate_question():

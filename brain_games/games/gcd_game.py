@@ -2,7 +2,7 @@ from random import randrange
 from math import gcd
 
 
-rules = 'Find the greatest common divisor of given numbers.'
+RULES = 'Find the greatest common divisor of given numbers.'
 
 
 def generate_question():
