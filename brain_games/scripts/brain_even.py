@@ -5,9 +5,10 @@ from brain_games.games import even_game
 
 
 def main():
-    return logic_game.play_game(even_game.rules,
-                                even_game.question,
-                                even_game.correct_answer(even_game.question))
+    result = logic_game.play_game(even_game.rules,
+                                  even_game.question,
+                                  even_game.correct_answer(even_game.question))
+    return result
 
 
 if __name__ == '__main__':
