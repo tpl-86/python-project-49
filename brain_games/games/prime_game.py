@@ -13,6 +13,8 @@ def generates_question():
 
 
 def is_prime(item):
+    if item < 2:
+        return 'no'
     for i in range(2, (item // 2) + 1):
         if item % i == 0:
             return 'no'
