@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
-from brain_games import logic_game
-from brain_games.games import gcd_game
+from brain_games.logic_game import play_game
+from brain_games.games.gcd_game import rules, question, get_correct_answer
 
 
 def main():
-    print(logic_game.play_game(gcd_game.rules,
-                               gcd_game.question,
-                               gcd_game.correct_answer(gcd_game.question)))
+    print(play_game(rules,
+                    question,
+                    get_correct_answer(question)))
 
 
 if __name__ == '__main__':

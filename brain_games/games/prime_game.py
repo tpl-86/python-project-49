@@ -4,11 +4,11 @@ from random import randint
 rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def generates_question():
+def generate_question():
     result = []
     for i in range(3):
-        number = randint(0, 1000)
-        result.append(number)
+        num = randint(0, 1000)
+        result.append(num)
     return result
 
 
@@ -21,11 +21,11 @@ def is_prime(item):
     return 'yes'
 
 
-def correct_answer(items):
+def get_correct_answer(items):
     result = []
     for item in items:
         result.append(is_prime(item))
     return result
 
 
-question = generates_question()
+question = generate_question()

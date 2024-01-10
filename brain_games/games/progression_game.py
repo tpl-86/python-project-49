@@ -4,7 +4,7 @@ import random
 rules = 'What number is missing in the progression?'
 
 
-def progression_output():
+def generate_progression():
     result = []
     for i in range(3):
         start = random.randint(0, 100)
@@ -17,7 +17,7 @@ def progression_output():
     return result
 
 
-def generates_question(list_progressions, items):
+def generate_question(list_progressions, items):
     result = []
     for i in range(len(list_progressions)):
         result_progression = ''
@@ -30,7 +30,7 @@ def generates_question(list_progressions, items):
     return result
 
 
-def correct_answer(list_progressions):
+def get_correct_answer(list_progressions):
     result = []
     for progression in list_progressions:
         item = random.randrange(0, len(progression) - 1)
@@ -38,6 +38,6 @@ def correct_answer(list_progressions):
     return result
 
 
-progressions = progression_output()
-answer = correct_answer(progressions)
-question = generates_question(progressions, answer)
+progressions = generate_progression()
+answer = get_correct_answer(progressions)
+question = generate_question(progressions, answer)

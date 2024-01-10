@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
 from brain_games import logic_game
-from brain_games.games import calc_game
+from brain_games.games.calc_game import rules, question, get_correct_answer
 
 
 def main():
-    print(logic_game.play_game(calc_game.rules,
-                               calc_game.question,
-                               calc_game.correct_answer(calc_game.question)))
+    print(logic_game.play_game(rules,
+                               question,
+                               get_correct_answer(question)))
 
 
 if __name__ == '__main__':

@@ -4,15 +4,15 @@ from random import randint
 rules = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def generates_question():
+def generate_question():
     result = []
     for i in range(3):
-        value = randint(1, 100)
-        result.append(value)
+        num = randint(1, 100)
+        result.append(num)
     return result
 
 
-def correct_answer(items):
+def get_correct_answer(items):
     result = []
     for i in items:
         if i % 2 == 0:
@@ -22,4 +22,4 @@ def correct_answer(items):
     return result
 
 
-question = generates_question()
+question = generate_question()

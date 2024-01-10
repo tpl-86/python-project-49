@@ -4,7 +4,7 @@ from random import randint, choice
 rules = 'What is the result of the expression?'
 
 
-def generates_question():
+def generate_question():
     result = []
     operation = '+-*'
     for i in range(3):
@@ -15,7 +15,7 @@ def generates_question():
     return result
 
 
-def correct_answer(items):
+def get_correct_answer(items):
     result = []
     for i in items:
         if '*' in i:
@@ -30,4 +30,4 @@ def correct_answer(items):
     return result
 
 
-question = generates_question()
+question = generate_question()
