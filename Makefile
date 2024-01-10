@@ -13,7 +13,7 @@ publish:
 package-install:
 	python3 -m pip install dist/*.whl
 
-int:
+lint:
 	poetry run flake8 brain_games
 
 reinstall:
