@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 
 from brain_games.logic_game import play_game
-from brain_games.games.progression_game import RULES, question, answer
+from brain_games.games import progression_game
 
 
 def main():
-    print(play_game(RULES,
-                    question,
-                    answer))
+    print(play_game(progression_game))
 
 
 if __name__ == '__main__':

@@ -6,38 +6,40 @@ RULES = 'What number is missing in the progression?'
 
 def generate_progression():
     result = []
-    for i in range(3):
-        start = random.randint(0, 100)
-        step = random.randint(1, 11)
-        progression_length = random.randint(5, 10)
-        result_progression = []
-        for j in range(progression_length):
-            result_progression.append(start + j * step)
-        result.append(result_progression)
+    start = random.randint(0, 100)
+    step = random.randint(1, 11)
+    progression_length = random.randint(5, 10)
+    for i in range(progression_length):
+        result.append(start + i * step)
     return result
 
 
-def generate_question(list_progressions, items):
-    result = []
-    for i in range(len(list_progressions)):
-        result_progression = ''
-        for j in range(len(list_progressions[i])):
-            if list_progressions[i][j] == items[i]:
-                result_progression += '..' + ' '
-            else:
-                result_progression += str(list_progressions[i][j]) + ' '
-        result.append(result_progression)
+def generate_question():
+    progression = generate_progression()
+    result = ''
+    random_value = random.randrange(len(progression))
+    item = progression[random_value]
+    for i in progression:
+        if i == item:
+            result += '..' + ' '
+        else:
+            result += str(i) + ' '
     return result
 
 
-def get_correct_answer(list_progressions):
-    result = []
-    for progression in list_progressions:
-        item = random.randrange(0, len(progression) - 1)
-        result.append(progression[item])
-    return result
-
-
-progressions = generate_progression()
-answer = get_correct_answer(progressions)
-question = generate_question(progressions, answer)
+def get_correct_answer(string):
+    list_of_string = string.split()
+    if list_of_string[0] == '..':
+        value = int(list_of_string[2]) - int(list_of_string[1])
+        result = int(list_of_string[1]) - value
+        return result
+    elif list_of_string[-1] == '..':
+        value = int(list_of_string[2]) - int(list_of_string[1])
+        result = int(list_of_string[-2]) + value
+        return result
+    for i in range(len(list_of_string)):
+        if list_of_string[i] == '..':
+            d = (int(list_of_string[-1]) - int(list_of_string[0])) / \
+                (len(list_of_string) - 1)
+            result = int(list_of_string[i - 1]) + int(d)
+            return result

@@ -5,21 +5,19 @@ RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def generate_question():
-    result = []
-    for i in range(3):
-        num = randint(1, 100)
-        result.append(num)
+    result = randint(1, 100)
     return result
 
 
-def get_correct_answer(items):
-    result = []
-    for i in items:
-        if i % 2 == 0:
-            result.append('yes')
-        else:
-            result.append('no')
-    return result
+def is_even(num):
+    if num % 2 == 0:
+        return True
+    else:
+        return False
 
 
-question = generate_question()
+def get_correct_answer(item):
+    if is_even(item):
+        return 'yes'
+    else:
+        return 'no'

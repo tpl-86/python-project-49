@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 
 from brain_games.logic_game import play_game
-from brain_games.games.even_game import RULES, question, get_correct_answer
+from brain_games.games import even_game
 
 
 def main():
-    print(play_game(RULES,
-                    question,
-                    get_correct_answer(question)))
+    print(play_game(even_game))
 
 
 if __name__ == '__main__':
